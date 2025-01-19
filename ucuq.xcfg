@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Configurations xmlns:xpp="http://q37.info/ns/xpp/">
+ <Configuration target="ucuq">
+  <Parameters>
+   <Service>53800</Service>
+   <Language>en</Language>
+   <Command>Launch</Command>
+   <ModulesFileName>/home/csimon/hg/q37/epeios/tools/ucuq/proxy/core/Modules.xml</ModulesFileName>
+  </Parameters>
+  <Definitions>
+   <Notification><![CDATA[
+****************************************************************************
+     Your application is connected to the free public server. Welcome!
+     THIS SERVICE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+     EXPRESS OR IMPLIED. THE USE OF THIS SERVICE IS AT YOUR OWN RISK.
+****************************************************************************
+
+Your system is identified as: '%SystemLabel%'.
+      ]]>   </Notification>
+  </Definitions>
+  <Locale>
+   <Translations message="VersionCommandDescription">
+    <Translation language="fr">Affiche la version du programme</Translation>
+    <Translation language="en">Displays the version of the program</Translation>
+   </Translations>
+   <Translations message="LicenseCommandDescription">
+    <Translation language="fr">Affiche la licence du programme</Translation>
+    <Translation language="en">Displays the program license</Translation>
+   </Translations>
+   <Translations message="UsageCommandDescription">
+    <Translation language="fr">Affiche cette page</Translation>
+    <Translation language="en">Displays this page</Translation>
+   </Translations>
+   <Translations text="TestCommandDescription">
+    <Translation language="fr">Commande de test.</Translation>
+    <Translation language="en">Test command.</Translation>
+   </Translations>
+   <Translations text="TestFlagDescription">
+    <Translation language="fr">fanion de test.</Translation>
+    <Translation language="en">test flag.</Translation>
+   </Translations>
+   <Translations text="TestOptionDescription">
+    <Translation language="fr">option de test.</Translation>
+    <Translation language="en">test option.</Translation>
+   </Translations>
+   <Translations text="TestOptionLabel">
+    <Translation language="fr">option (fr)</Translation>
+    <Translation language="en">option (en)</Translation>
+   </Translations>
+   <Translations text="TestArgumentDescription">
+    <Translation language="fr">argument de test.</Translation>
+    <Translation language="en">test argument.</Translation>
+   </Translations>
+   <Translations text="TestArgumentLabel">
+    <Translation language="fr">argument (fr)</Translation>
+    <Translation language="en">argument (en)</Translation>
+   </Translations>
+  </Locale>
+  <Arguments>
+   <Argument id="Usage" Description="UsageCommandDescription" long="help" Value="Usage"/>
+   <Argument id="Version" Description="VersionCommandDescription" long="version" Value="Version"/>
+   <Argument id="License" Description="LicenseCommandDescription" long="license" Value="License"/>
+   <Argument id="TestCommand" Description="TestCommandDescription" long="test" short="t" Value="Test" Usage="%TestFlag% %TestOption% %TestArgument%"/>
+   <Argument id="TestFlag" Description="TestFlagDescription" long="flag" short="f" Path="Flag" Value="TestFlag"/>
+   <Argument id="TestOption" Description="TestOptionDescription" long="option" short="o" Path="Option" Label="TestOptionLabel"/>
+   <Argument id="TestArgument" Description="TestArgumentDescription" Path="Test" Label="TestArgumentLabel"/>
+   <Layouts>
+    <Layout command="Launch"></Layout>
+   </Layouts>
+  </Arguments>
+ </Configuration>
+</Configurations>
